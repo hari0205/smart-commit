@@ -12,3 +12,11 @@ python = "^3.10"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.poetry.scripts]
+auto-smart-commit = "clabs-smart-commit:main"  
