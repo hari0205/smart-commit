@@ -100,6 +100,9 @@ def main()->None:
     ## Get current git branch
     branch = get_current_branch()
     
+    if branch not in ["main", "master", "staging"]:
+        print(f"Commits to {branch} not permitted. Please commit to feature branch and open PR.")
+    
     jira_issue_key = extract_jira_issue_key(branch)
     if not jira_issue_key:
         sys.exit(0)
